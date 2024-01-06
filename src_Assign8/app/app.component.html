@@ -1,0 +1,18 @@
+<h1>Assignment 8</h1>
+
+<!-- question1 -->
+<app-question1-child (eventEmitter)="dataReceived=$event"></app-question1-child>
+<p>Data Received : {{dataReceived}} </p>
+
+<!-- question2 -->
+<app-question2-child [recieveData]="sendDataFromParent" (eventEmitter)="dataReceived=$event"></app-question2-child>
+<p>{{dataReceived}}</p>
+
+<!-- question3 -->
+<app-question3-child></app-question3-child>
+
+<!-- question4 -->
+<app-question4-child></app-question4-child>
+
+
+<router-outlet></router-outlet>
