@@ -1,0 +1,35 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { PersonalInfoComponent } from './personal-info/personal-info.component';
+import { BugInfoComponent } from './bug-info/bug-info.component';
+import { FooterComponent } from './footer/footer.component';
+import { DisplayComponent } from './display/display.component';
+
+
+// import { SecondCompComponent } from './second-comp/second-comp.component';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, HeaderComponent, PersonalInfoComponent, 
+    BugInfoComponent, FooterComponent, DisplayComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'Assignment12';
+
+  showHeader = true;  
+  showPersonalInfo = true;
+  showBugInfo =  true;
+  showFooter = true;
+
+  onSubmitForm() {
+    this.showHeader = false;
+    this.showPersonalInfo = false;
+    this.showBugInfo = false;
+    this.showFooter = false;
+  }
+}

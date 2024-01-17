@@ -1,0 +1,40 @@
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+  <form>
+    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <h1 style="color: lightpink; margin-bottom: 0;">Contact Our</h1>
+        <h1 style="color: black; margin-top: 0;">Customer Support Center</h1>
+      </div>
+      <img src="assets/pc.png" alt="Computer Icon" style="margin-top: 10px; margin-left: 10px;">
+    </div>
+    <div>
+      <h3 style="text-align: center;">Contact Information</h3>
+      <div style="text-align: center;">Please fill out your contact information below.</div>
+    </div>
+    <div class="mb-3" style="display: flex; flex-direction: column;">
+      <h2 style="color: black; margin-bottom: 10px;">Name</h2>
+      <div style="display: flex; gap: 10px;">
+        <div style="flex: 1;">
+          <input type="text" class="form-control" id="firstName" aria-describedby="firstNameHelp">
+          <label for="firstName" class="form-label">First Name<span style="color: red;">*</span></label>
+        </div>
+        <div style="flex: 1;">
+          <input type="text" class="form-control" id="lastName" aria-describedby="lastNameHelp">
+          <label for="lastName" class="form-label">Last Name<span style="color: red;">*</span></label>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email<span style="color: red;">*</span></label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone<span style="color: red;">*</span></label>
+      <input type="tel" class="form-control" id="phone" aria-describedby="phoneHelp">
+    </div>
+    <div class="mb-3">
+      <label for="address" class="form-label">Address<span style="color: red;">*</span></label>
+      <input type="text" class="form-control" id="address" aria-describedby="addressHelp">
+    </div>
+  </form>
+</div>

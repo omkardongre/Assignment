@@ -1,0 +1,6 @@
+<app-header *ngIf="showHeader"></app-header>
+<app-personal-info *ngIf="showPersonalInfo"></app-personal-info>
+<app-bug-info *ngIf="showBugInfo"></app-bug-info>
+<app-footer *ngIf="showFooter" (submitForm)="onSubmitForm()"></app-footer>
+
+<router-outlet></router-outlet>
