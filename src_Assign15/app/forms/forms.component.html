@@ -1,0 +1,43 @@
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+  <form [formGroup]="SupportCenterForm" style="max-width: 400px; width: 100%;">
+      <div style="display: flex; align-items: center; margin-bottom: 10px;">
+          <div style="display: flex; flex-direction: column; align-items: center;">
+              <h1 style="color: lightpink; margin-bottom: 0; font-size: 1.5em;">Contact Our</h1>
+              <h1 style="color: black; margin-top: 0; font-size: 1.5em;">Customer Support Center</h1>
+          </div>
+          <img src="assets/pc.png" alt="Computer Icon" style="margin-top: 10px; margin-left: 10px; max-height: 50px;">
+      </div>
+      <div>
+          <h3 style="text-align: center; font-size: 1.2em;">Contact Information</h3>
+          <div style="text-align: center; font-size: 0.9em;">Please fill out your contact information below.</div>
+      </div>
+      <div class="mb-2" style="display: flex; flex-direction: column;">
+          <h2 style="color: black; margin-bottom: 8px; font-size: 1.1em;">Name</h2>
+          <div style="display: flex; gap: 8px;">
+              <div style="flex: 1;">
+                  <input [class.is-invalid]="SupportCenterForm.get('firstName')?.invalid && SupportCenterForm.get('firstName')?.touched" formControlName="firstName" type="text" class="form-control" id="firstName" aria-describedby="firstNameHelp" style="font-size: 1em;">
+                  <label for="firstName" class="form-label" style="font-size: 0.9em;">First Name<span style="color: red;">*</span></label>
+              </div>
+              <div style="flex: 1;">
+                  <input [class.is-invalid]="SupportCenterForm.get('lastName')?.invalid && SupportCenterForm.get('lastName')?.touched" formControlName="lastName" type="text" class="form-control" id="lastName" aria-describedby="lastNameHelp" style="font-size: 1em;">
+                  <label for="lastName" class="form-label" style="font-size: 0.9em;">Last Name<span style="color: red;">*</span></label>
+              </div>
+          </div>
+      </div>
+      <div class="mb-2">
+          <label for="email" class="form-label" style="font-size: 1em;">Email<span style="color: red;">*</span></label>
+          <input [class.is-invalid]="SupportCenterForm.get('email')?.invalid && SupportCenterForm.get('email')?.touched" formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" style="font-size: 1em;">
+          <small [class.d-none]="SupportCenterForm.get('email')?.valid || !SupportCenterForm.get('email')?.touched" class="text-danger">Enter valid email</small>
+        </div>
+      <div class="mb-2">
+          <label for="phone" class="form-label" style="font-size: 1em;">Phone<span style="color: red;">*</span></label>
+          <input [class.is-invalid]="SupportCenterForm.get('phone')?.invalid && SupportCenterForm.get('phone')?.touched" formControlName="phone" type="tel" class="form-control" id="phone" aria-describedby="phoneHelp" style="font-size: 1em;">
+          <small [class.d-none]="SupportCenterForm.get('phone')?.valid || !SupportCenterForm.get('phone')?.touched" class="text-danger">Enter valid number</small>
+        </div>
+      <div class="mb-2">
+          <label for="address" class="form-label" style="font-size: 1em;">Address<span style="color: red;">*</span></label>
+          <input [class.is-invalid]="SupportCenterForm.get('address')?.invalid && SupportCenterForm.get('address')?.touched" formControlName="address" type="text" class="form-control" id="address" aria-describedby="addressHelp" style="font-size: 1em;">
+        </div>
+      <button [disabled]="SupportCenterForm.invalid" (click) = onSubmit() type="submit" class="btn btn-primary" style="font-size: 1em;">Submit</button>
+  </form>
+</div>
